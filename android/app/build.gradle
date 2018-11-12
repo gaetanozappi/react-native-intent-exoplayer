@@ -1,0 +1,27 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+    maven { url "https://maven.google.com" }
+    maven { url  "http://dl.bintray.com/lukaville/maven" }
+}
+
+dependencies {
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.facebook.react:react-native:+'
+    implementation 'com.google.android.exoplayer:exoplayer:2.8.1'
+    implementation 'com.github.rubensousa:bottomsheetbuilder:1.6.1'
+    implementation 'com.nbsp:library:1.8'
+}

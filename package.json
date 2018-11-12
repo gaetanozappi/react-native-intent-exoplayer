@@ -1,0 +1,28 @@
+{
+  "name": "react-native-intent-exoplayer",
+  "version": "0.0.1",
+  "description": "It allows you to start a player exoplayer for streaming a video via intent.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gaetanozappi/react-native-intent-exoplayer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gaetanozappi/react-native-intent-exoplayer/issues"
+  },
+  "homepage": "https://github.com/gaetanozappi/react-native-intent-exoplayer#readme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "intent",
+    "player",
+    "video",
+    "streaming",
+    "exoplayer"
+  ],
+  "author": "",
+  "license": "",
+  "peerDependencies": {}
+}

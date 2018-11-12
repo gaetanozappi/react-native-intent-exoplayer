@@ -1,24 +1,29 @@
-# React Native: Native Intent Player
+# React Native: react-native-intent-exoplayer
 
-[![github home](http://img.shields.io/npm/v/react-native-intent-player.svg?style=flat)](https://www.npmjs.com/package/react-native-intent-player)
-[![github home](https://img.shields.io/badge/gaetanozappi-react--native--intent--player-blue.svg?style=flat)](https://github.com/gaetanozappi/react-native-intent-player)
-[![github issues](https://img.shields.io/github/issues/gaetanozappi/react-native-intent-player.svg?style=flat)](https://github.com/gaetanozappi/react-native-intent-player/issues)
+[![github home](http://img.shields.io/npm/v/react-native-intent-exoplayer.svg?style=flat)](https://www.npmjs.com/package/react-native-intent-exoplayer)
+![platforms](https://img.shields.io/badge/platforms-Android-brightgreen.svg?style=flat&colorB=191A17)
+[![github home](https://img.shields.io/badge/gaetanozappi-react--native--intent--exoplayer-blue.svg?style=flat)](https://github.com/gaetanozappi/react-native-intent-exoplayer)
+[![npm](https://img.shields.io/npm/dm/react-native-exoplayer-player.svg?style=flat&colorB=007ec6)](https://www.npmjs.com/package/react-native-intent-exoplayer)
 
+[![github issues](https://img.shields.io/github/issues/gaetanozappi/react-native-intent-exoplayer.svg?style=flat)](https://github.com/gaetanozappi/react-native-intent-exoplayer/issues)
+[![github closed issues](https://img.shields.io/github/issues-closed/gaetanozappi/react-native-intent-exoplayer.svg?style=flat&colorB=44cc11)](https://github.com/gaetanozappi/react-native-intent-exoplayer/issues?q=is%3Aissue+is%3Aclosed)
+[![Issue Stats](https://img.shields.io/issuestats/i/github/gaetanozappi/react-native-intent-exoplayer.svg?style=flat&colorB=44cc11)](http://github.com/gaetanozappi/react-native-intent-exoplayer/issues)
+[![github license](https://img.shields.io/github/license/gaetanozappi/react-native-intent-exoplayer.svg)]()
 
-![PNG](screenshot/react-native-intent-player.jpeg)
+![GIF](screenshot/exoplayer-ui.gif)
 
 -   [Usage](#usage)
 -   [License](#license)
 
 ### Android
 
-Add `react-native-intent-player` to your `./android/settings.gradle` file as follows:
+Add `react-native-intent-exoplayer` to your `./android/settings.gradle` file as follows:
 
 ```diff
 ...
 include ':app'
-+ include ':react-native-intent-player'
-+ project(':react-native-intent-player').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-intent-player/android/app')
++ include ':react-native-intent-exoplayer'
++ project(':react-native-intent-exoplayer').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-intent-exoplayer/android/app')
 ```
 
 Include it as dependency in `./android/app/build.gradle` file:
@@ -27,7 +32,7 @@ Include it as dependency in `./android/app/build.gradle` file:
 dependencies {
     ...
     compile "com.facebook.react:react-native:+"  // From node_modules
-+   compile project(':react-native-intent-player')
++   compile project(':react-native-intent-exoplayer')
 }
 ```
 
@@ -35,7 +40,7 @@ Finally, you need to add the package within the `ReactInstanceManager` of your
 MainActivity (`./android/app/src/main/java/your/bundle/MainActivity.java`):
 
 ```java
-import com.reactlibrary.PlayerPackage;  // <---- import this one
+import com.zappi.ui.exoplayer.PlayerPackage;  // <---- import this one
 ...
 @Override
 protected List<ReactPackage> getPackages() {
@@ -52,15 +57,34 @@ your project with `react-native run-android`.
 ## Usage
 
 ```javascript
-import Player from 'react-native-intent-player';
-```
+import React, { Component } from 'react';
+import Player from 'react-native-intent-exoplayer';
 
-- API Way
+type Props = {};
+export default class App extends Component<Props> {
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: 'Big Buck Bunny',
+      url: 'https://www.w3schools.com/html/mov_bbb.mp4',
+      sub: 'https://pastebin.com/raw/A0fDHxgK',
+      subShow: true
+    };
+  }
 
-```javascript
-Player.play(url).then(a => {
-  console.log(a);
-}).catch(e => console.log(e));
+  componentDidMount() {
+    Player.play(this.state.title,this.state.url,this.state.sub,this.state.subShow)
+      .then(a => {
+        console.log(a);
+      })
+      .catch(e => console.log(e));
+  }
+
+  render() {
+    return null;
+  }
+}
 ```
 
 ## License

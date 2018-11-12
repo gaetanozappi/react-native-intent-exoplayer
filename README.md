@@ -12,10 +12,16 @@
 
 ![GIF](screenshot/exoplayer-ui.gif)
 
--   [Usage](#usage)
--   [License](#license)
+-   [Usage](#-usage)
+-   [License](#-license)
 
-### Android
+## 📖 Getting started
+
+`$ npm install react-native-intent-exoplayer --save`
+
+`$ react-native link react-native-intent-exoplayer`
+
+#### Android
 
 Add `react-native-intent-exoplayer` to your `./android/settings.gradle` file as follows:
 
@@ -54,7 +60,7 @@ protected List<ReactPackage> getPackages() {
 After that, you will need to recompile
 your project with `react-native run-android`.
 
-## Usage
+## 💻 Usage
 
 ```javascript
 import React, { Component } from 'react';
@@ -87,5 +93,5 @@ export default class App extends Component<Props> {
 }
 ```
 
-## License
+## 📜 License
 This library is provided under the Apache License.

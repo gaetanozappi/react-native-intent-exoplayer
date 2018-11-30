@@ -1,5 +1,6 @@
 # React Native: react-native-intent-exoplayer
 
+[![GitHub package version](https://img.shields.io/github/package-json/v/gaetanozappi/react-native-intent-exoplayer.svg?style=flat&colorB=2b7cff)](https://github.com/gaetanozappi/react-native-intent-exoplayer)
 [![github home](http://img.shields.io/npm/v/react-native-intent-exoplayer.svg?style=flat)](https://www.npmjs.com/package/react-native-intent-exoplayer)
 ![platforms](https://img.shields.io/badge/platforms-Android-brightgreen.svg?style=flat&colorB=191A17)
 [![github home](https://img.shields.io/badge/gaetanozappi-react--native--intent--exoplayer-blue.svg?style=flat)](https://github.com/gaetanozappi/react-native-intent-exoplayer)

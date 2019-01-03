@@ -11,7 +11,7 @@
 [![Issue Stats](https://img.shields.io/issuestats/i/github/gaetanozappi/react-native-intent-exoplayer.svg?style=flat&colorB=44cc11)](http://github.com/gaetanozappi/react-native-intent-exoplayer/issues)
 [![github license](https://img.shields.io/github/license/gaetanozappi/react-native-intent-exoplayer.svg)]()
 
-![GIF](screenshot/exoplayer-ui.gif)
+<img src="https://github.com/gaetanozappi/react-native-intent-exoplayer/raw/master/screenshot/react-native-intent-exoplayer.gif" />
 
 -   [Usage](#-usage)
 -   [License](#-license)
@@ -69,7 +69,7 @@ import Player from 'react-native-intent-exoplayer';
 
 type Props = {};
 export default class App extends Component<Props> {
-  
+
   constructor(props) {
     super(props);
     this.state = {
